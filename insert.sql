@@ -6,6 +6,7 @@ INSERT autor VALUES ('Beata', 'D¹browska')
 INSERT autor VALUES ('Dale', 'Carnegie')
 INSERT autor VALUES ('Jojo', 'Moyes')
 INSERT autor VALUES ('Andre', 'Acima')
+INSERT autor VALUES ('Sarah', 'Churchwell')
 
 -- dostawa
 INSERT dostawa VALUES ('kurier')
@@ -25,6 +26,7 @@ INSERT kategoria_ksiazki VALUES ('Literatura obyczajowa')
 INSERT kategoria_ksiazki VALUES ('Kuchnia')
 INSERT kategoria_ksiazki VALUES ('Rozwój osobisty')
 INSERT kategoria_ksiazki VALUES ('Krymina³')
+INSERT kategoria_ksiazki VALUES ('Biografie')
 
 -- stanowisko
 INSERT stanowisko VALUES ('ksiêgowa')
@@ -44,6 +46,8 @@ INSERT ksiazka VALUES ((SELECT id_kategoria_ksiazki FROM kategoria_ksiazki WHERE
 INSERT ksiazka VALUES ((SELECT id_kategoria_ksiazki FROM kategoria_ksiazki WHERE nazwa_kategoria ='Literatura obyczajowa'), 'Pamiêtnik', '2005', '49637855')
 INSERT ksiazka VALUES ((SELECT id_kategoria_ksiazki FROM kategoria_ksiazki WHERE nazwa_kategoria ='Krymina³'), 'W domu', '2018', '42741523')
 INSERT ksiazka VALUES ((SELECT id_kategoria_ksiazki FROM kategoria_ksiazki WHERE nazwa_kategoria ='Literatura obyczajowa'), 'Ostatni list od kochanka', '2018', '99637855')
+INSERT ksiazka VALUES ((SELECT id_kategoria_ksiazki FROM kategoria_ksiazki WHERE nazwa_kategoria ='Biografie'), 'Twarze Marilyn Monroe', '2018', '99688888')
+
 
 -- pracownik
 INSERT pracownik VALUES ((SELECT id_stanowisko FROM stanowisko WHERE nazwa_stanowisko = 'ksiêgowa'), (SELECT id_dzial_pracownik FROM dzial_pracownik WHERE nazwa_dzial_pracownik = 'ksiêgowoœæ'), 'Magdalena', 'Kokos', '2015-10-01', NULL, 2500, '652 896 123')
